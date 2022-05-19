@@ -1,7 +1,6 @@
 @font-face {
   font-family: "AvenirLTStd-Black";
-  src: url(D:\React\typofrontend\frontend\public\fonts\AvenirLTStd-Black.otf)
-    format("truetype");
+  src: url("./AvenirLTStd-Black.otf") format("truetype");
 }
 
 .main-nav {

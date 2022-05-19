@@ -1,0 +1,13 @@
+.mainDiv h1 {
+  color: white;
+  position: relative;
+  top: 48%;
+  left: 35%;
+  transform: translate(-20%, -20%);
+}
+.mainDiv {
+  overflow: hidden;
+}
+.Fade {
+  border: 2px solid green;
+}
