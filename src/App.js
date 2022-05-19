@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage></LandingPage>} />
-        <Route path="/type" element={<TypingPage></TypingPage>} />
+        <Route path="/typo" element={<TypingPage></TypingPage>} />
       </Routes>
     </BrowserRouter>
   );

@@ -10,7 +10,7 @@ const LandingPage = () => {
 
   const escFunction = useCallback((event) => {
     if (event.keyCode === 13) {
-      navigate("/type");
+      navigate("/typo");
     }
   }, []);
 
