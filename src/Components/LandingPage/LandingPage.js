@@ -4,6 +4,7 @@ import TypeWriterEffect from "react-typewriter-effect";
 import { useEffect } from "react";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const LandingPage = () => {
 
   return (
     <div className="mainDiv">
+      <Navbar></Navbar>
       <div className="typoHeading">
         <TypeWriterEffect
           textStyle={{
