@@ -53,10 +53,10 @@
   padding-left: 60px;
   padding-right: 10px;
   /* border: 2px solid purple; */
-  height: 480px;
+  height: 430px;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-top: -3%;
+  margin-top: -3.7%;
 }
 
 .responsiveTable li {

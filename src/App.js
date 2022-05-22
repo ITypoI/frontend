@@ -8,13 +8,14 @@ import LeaderBoard from "./components/LeaderBoard/LeaderBoard";
 function App() {
   return (
     <Fragment>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage></LandingPage>} />
           <Route path="/typo" element={<TypingPage></TypingPage>} />
+          <Route path="/leaderboard" element={<LeaderBoard></LeaderBoard>} />
         </Routes>
-      </BrowserRouter> */}
-      <LeaderBoard></LeaderBoard>
+      </BrowserRouter>
+      {/* <LeaderBoard></LeaderBoard> */}
     </Fragment>
   );
 }
