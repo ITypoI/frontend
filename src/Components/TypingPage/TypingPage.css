@@ -5,9 +5,9 @@
   left: 35%;
   transform: translate(-20%, -20%);
 }
-.mainDiv {
+/* .mainDiv {
   overflow: hidden;
-}
+} */
 .Fade {
   border: 2px solid green;
 }
