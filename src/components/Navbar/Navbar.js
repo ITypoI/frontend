@@ -4,15 +4,20 @@ import { VscGlobe } from "react-icons/vsc";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 import { HiOutlineUser } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [text, setText] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="main-nav">
       <div className="typo-icon">
         <img
+          onClick={() => {
+            navigate("/");
+          }}
           className="typoicon"
           src="./Navbaricons/typoicon.svg"
           alt="typo icon"
@@ -29,6 +34,7 @@ function Navbar() {
         <VscGlobe
           onClick={() => {
             setText("Leaderboard");
+            navigate("/leaderboard");
           }}
           className="nav-icons"
           src="./Navbaricons/world.svg"
