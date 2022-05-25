@@ -11,3 +11,11 @@
 .Fade {
   border: 2px solid green;
 }
+.keyboard-component {
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}

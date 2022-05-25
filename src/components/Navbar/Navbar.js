@@ -15,9 +15,7 @@ function Navbar() {
     <div className="main-nav">
       <div className="typo-icon">
         <img
-          onClick={() => {
-            navigate("/");
-          }}
+          onClick={() => navigate("/")}
           className="typoicon"
           src="./Navbaricons/typoicon.svg"
           alt="typo icon"
@@ -32,9 +30,15 @@ function Navbar() {
           alt="edit icon"
         />
         <VscGlobe
-          onClick={() => {
+          onMouseEnter={() => {
             setText("Leaderboard");
+          }}
+          onMouseLeave={() => {
+            setText("");
+          }}
+          onClick={() => {
             navigate("/leaderboard");
+            setText("");
           }}
           className="nav-icons"
           src="./Navbaricons/world.svg"
@@ -42,24 +46,33 @@ function Navbar() {
         />
 
         <AiOutlineInfoCircle
-          onClick={() => {
+          onMouseEnter={() => {
             setText("About");
+          }}
+          onMouseLeave={() => {
+            setText("");
           }}
           className="nav-icons"
           src="./Navbaricons/info.svg"
           alt="info icon"
         />
         <FiSettings
-          onClick={() => {
+          onMouseEnter={() => {
             setText("Settings");
+          }}
+          onMouseLeave={() => {
+            setText("");
           }}
           className="nav-icons"
           src="./Navbaricons/settings.svg"
           alt="settings icon"
         />
         <HiOutlineUser
-          onClick={() => {
+          onMouseEnter={() => {
             setText("Username@101");
+          }}
+          onMouseLeave={() => {
+            setText("");
           }}
           className="nav-icons specific-right-navicon"
           src="./Navbaricons/user.svg"
