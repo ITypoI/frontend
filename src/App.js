@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import "./App.css";
-import LandingPage from "./components/LandingPage/LandingPage";
-import TypingPage from "./components/TypingPage/TypingPage";
+import LandingPage from "./Components/LandingPage/LandingPage";
+import TypingPage from "./Components/TypingPage/TypingPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LeaderBoard from "./components/LeaderBoard/LeaderBoard";
+import LeaderBoard from "./Components/LeaderBoard/LeaderBoard";
 
 function App() {
   return (

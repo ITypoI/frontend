@@ -1,0 +1,147 @@
+.well {
+  /* border: 1px solid red; */
+  margin-bottom: 10px;
+  margin-top: 30%;
+}
+
+.cell {
+  max-width: 909px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.keyboard-row {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  max-height: 50px;
+}
+
+/*KEYBOARD DESIGN */
+
+button {
+  cursor: none;
+  pointer-events: none;
+}
+.width-assign {
+  width: 52px;
+}
+/* 1st ROW */
+.keyboard-key-esc {
+  margin-right: 13px;
+}
+
+.pushable-normal {
+  background: #323232;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  box-shadow: 0px -3.68px 3.68px 0px rgba(3, 3, 3, 0.25) inset;
+}
+.front-normal {
+  display: block;
+  padding: 18px 14px;
+  border-radius: 12px;
+
+  background: #1b1b1b;
+  color: #b9e04c;
+  transform: translateY(-6px);
+  box-shadow: 0px -4.9px 4.9px 0px rgba(3, 3, 3, 0.25) inset;
+}
+
+.size-small {
+  font-size: 14px;
+}
+.keyboard-key-bar {
+  margin-right: 13px;
+}
+.pushable-speed-bar {
+  background: #323232;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  box-shadow: 0px -3.68px 3.68px 0px rgba(3, 3, 3, 0.25) inset;
+}
+.front-speed-bar {
+  width: 767px;
+  display: block;
+  padding: 18px 0px;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #1b1b1b;
+  color: #b9e04c;
+  transform: translateY(-6px);
+  box-shadow: 0px -4.9px 4.9px 0px rgba(3, 3, 3, 0.25) inset;
+}
+.speed-bar-progress {
+  width: 703px;
+  height: 10px;
+  color: #6b6b6b;
+  padding: 2px;
+}
+
+.front-normal-refresh-icon {
+  display: block;
+  padding: 17px 15.5px;
+  border-radius: 12px;
+
+  background: hsl(0, 0%, 11%);
+  color: #b9e04c;
+  transform: translateY(-6px);
+  box-shadow: 0px -4.9px 4.9px 0px rgba(3, 3, 3, 0.25) inset;
+}
+
+/*2nd ROW and 3rd ROW*/
+
+.size-big {
+  font-size: 20px;
+}
+.padding-tweak {
+  padding: 15px 14px;
+}
+.keyboard-key-back .width-assign {
+  width: 82px;
+}
+/*4th ROW*/
+.keyboard-key-Caps .width-assign {
+  width: 98px;
+}
+
+/*5th ROW*/
+.keyboard-key-shift .width-assign {
+  width: 130px;
+}
+
+/*6th ROW*/
+
+.keyboard-key-spacebar {
+  margin-left: 237px;
+}
+
+.pushable-space-bar {
+  background: #323232;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  box-shadow: 0px -3.68px 3.68px 0px rgba(3, 3, 3, 0.25) inset;
+}
+.front-space-bar {
+  width: 442px;
+  display: block;
+  padding: 23px 0px;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #1b1b1b;
+  color: #b9e04c;
+  transform: translateY(-6px);
+  box-shadow: 0px -4.9px 4.9px 0px rgba(3, 3, 3, 0.25) inset;
+}
