@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiEditAlt } from "react-icons/bi";
 import { VscGlobe } from "react-icons/vsc";
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -9,7 +9,13 @@ import "./Navbar.css";
 
 function Navbar() {
   const [text, setText] = useState("");
+  const [iconcolor, seticoncolor] = useState("#9a9a9a");
   const navigate = useNavigate();
+  const path = window.location.pathname;
+  useEffect(() => {
+    if (path === "/leaderboard") seticoncolor("#b9e04c");
+    else seticoncolor("#9a9a9a");
+  }, [path]);
 
   return (
     <div className="main-nav">
@@ -30,14 +36,22 @@ function Navbar() {
           alt="edit icon"
         />
         <VscGlobe
+          style={{ color: `${iconcolor}` }}
           onMouseEnter={() => {
+            seticoncolor("#b9e04c");
             setText("Leaderboard");
           }}
           onMouseLeave={() => {
+            if (path === "/") seticoncolor("#9a9a9a");
             setText("");
           }}
           onClick={() => {
-            navigate("/leaderboard");
+            if (path === "/leaderboard") {
+              navigate("/typo");
+            } else {
+              navigate("/leaderboard");
+            }
+
             setText("");
           }}
           className="nav-icons"

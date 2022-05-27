@@ -19,3 +19,25 @@
   align-items: center;
   z-index: -1;
 }
+.textBox {
+  color: wheat;
+  border: 2px solid red;
+  position: relative;
+  top: 15%;
+  left: 15%;
+  max-width: 900px;
+  font-size: larger;
+  white-space: pre-line;
+  height: 120px;
+  overflow: hidden;
+}
+.textBox p {
+  display: flex;
+}
+
+.has-success {
+  background-color: green;
+}
+.has-failed {
+  background-color: red;
+}
