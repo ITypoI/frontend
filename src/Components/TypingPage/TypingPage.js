@@ -13,10 +13,11 @@ const TypingPage = () => {
   const [countDown, setCountDown] = useState(SECONDS);
   const [currInput, setCurrInput] = useState("");
   const [currWordIndex, setCurrWordIndex] = useState(0);
-  const [currCharIndex, setCurrCharIndex] = useState(-1);
+  const [currCharIndex, setCurrCharIndex] = useState(0);
   const [currChar, setCurrChar] = useState("");
   const [correct, setCorrect] = useState(0);
   const [incorrect, setIncorrect] = useState(0);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     setWords(generateWords());
@@ -26,21 +27,27 @@ const TypingPage = () => {
     return new Array(NUM_OF_WORDS).fill(null).map(() => randomWords());
   };
 
-  // const output = words.split("");
   const handleKeyDown = ({ keyCode, key }) => {
     // space bar
     if (keyCode === 32) {
       checkMatch();
       setCurrInput("");
-      if (currCharIndex > -1) setCurrWordIndex(currWordIndex + 1);
-      setCurrCharIndex(-1);
+      if (currCharIndex > 0) setCurrWordIndex(currWordIndex + 1);
+      setCurrCharIndex(0);
       // backspace
     } else if (keyCode === 8) {
-      if (currCharIndex > -1) setCurrCharIndex(currCharIndex - 1);
-      setCurrChar("");
+      let res = currInput.trim();
+      console.log(res);
+      let val = res.length;
+      val--;
+      if (val >= 0)
+        document.getElementById(currWordIndex + "" + val).style.color =
+          "#6B6B6B";
+      if (val >= 0) setCurrCharIndex(val);
+      else setCurrCharIndex(0);
     } else {
+      checkChar(key);
       setCurrCharIndex(currCharIndex + 1);
-      setCurrChar(key);
     }
   };
 
@@ -54,14 +61,17 @@ const TypingPage = () => {
     }
   };
 
-  const getCharClass = (wordIdx, charIdx, char) => {
-    if (wordIdx === currWordIndex && charIdx === currCharIndex && currChar) {
-      if (char === currChar) {
-        return "has-success";
-      } else {
-        return "has-failed";
-      }
-    } else return "";
+  const checkChar = (key) => {
+    if (
+      currCharIndex <= words[currWordIndex].length &&
+      words[currWordIndex][currCharIndex] === key
+    ) {
+      document.getElementById(currWordIndex + "" + currCharIndex).style.color =
+        "#B9E04C";
+    } else if (currCharIndex <= words[currWordIndex].length) {
+      document.getElementById(currWordIndex + "" + currCharIndex).style.color =
+        "#ffffff";
+    } else return;
   };
 
   return (
@@ -78,8 +88,8 @@ const TypingPage = () => {
           <span key={i}>
             <span>
               {word.split("").map((char, idx) => (
-                <span key={idx} className={getCharClass(i, idx, char)}>
-                  <span>{char}</span>
+                <span key={idx}>
+                  <span id={i + "" + idx}>{char}</span>
                 </span>
               ))}
             </span>

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "AvenirLTStd-Roman";
+  src: url(../TypingPage/AvenirLTStd-Roman.otf) format("truetype");
+}
+
 .mainDiv h1 {
   color: white;
   position: relative;
@@ -20,8 +25,9 @@
   z-index: -1;
 }
 .textBox {
-  color: wheat;
-  border: 2px solid red;
+  color: #6b6b6b;
+  font-family: "AvenirLTStd-Roman";
+  /* border: 2px solid red; */
   position: relative;
   top: 15%;
   left: 15%;
@@ -36,8 +42,8 @@
 }
 
 .has-success {
-  background-color: green;
+  color: green;
 }
 .has-failed {
-  background-color: red;
+  color: #ffffff;
 }

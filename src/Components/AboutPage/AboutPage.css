@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Museo700-Regular";
+  src: url(../AboutPage/Museo700-Regular.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Book";
+  src: url(../AboutPage/AvenirLTStd-Book.otf) format("truetype");
+}
+
+.aboutPage_MainDiv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #131313;
+  /* background-color: red; */
+  overflow: hidden;
+}
+
+.aboutContentDiv {
+  /* border: 2px solid black; */
+  /* height: 30px; */
+  position: relative;
+  top: 16%;
+}
+
+.aboutPara {
+  /* border: 2px solid green; */
+  max-width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutPara h1 {
+  color: #b9e04c;
+  font-size: 40px;
+  font-family: "Museo700-Regular", sans-serif;
+}
+
+.aboutPara p {
+  color: #9a9a9a;
+  font-family: "AvenirLTStd-Book", sans-serif;
+  font-size: 17px;
+}
