@@ -66,6 +66,9 @@ function Navbar() {
           onMouseLeave={() => {
             setText("");
           }}
+          onClick={() => {
+            navigate("/about");
+          }}
           className="nav-icons"
           src="./Navbaricons/info.svg"
           alt="info icon"
@@ -87,6 +90,9 @@ function Navbar() {
           }}
           onMouseLeave={() => {
             setText("");
+          }}
+          onClick={() => {
+            navigate("/signup");
           }}
           className="nav-icons specific-right-navicon"
           src="./Navbaricons/user.svg"

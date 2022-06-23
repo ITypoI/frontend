@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "AvenirLTStd-Roman";
+  src: url(../LoginPage/AvenirLTStd-Roman.otf) format("truetype");
+}
+@font-face {
+  font-family: "AvenirLTStd-Book";
+  src: url(../LoginPage/AvenirLTStd-Book.otf) format("truetype");
+}
+* {
+  font-family: "AvenirLTStd-Roman";
+}
+.login-form-container {
+  /* height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-form-container h1 {
+  color: #b9e04c;
+  font-size: 28px;
+  text-align: left;
+  margin: 0;
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.login-form-container input {
+  background: #303030;
+  width: 300px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  caret-color: #fff;
+  font-family: "AvenirLTStd-Book";
+  color: #fff;
+}
+.login-form-container div {
+  line-height: 3.6;
+}
+.login-form-container input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 15px;
+  justify-content: center;
+}
+.login-form-container button {
+  margin-left: 114px;
+  margin-top: 15px;
+}
+.pushable {
+  background: #323232;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  box-shadow: 0px -3.68px 3.68px 0px rgba(3, 3, 3, 0.25) inset;
+}
+.front {
+  display: block;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #1b1b1b;
+  color: #b9e04c;
+  transform: translateY(-6px);
+  box-shadow: 0px -4.9px 4.9px 0px rgba(3, 3, 3, 0.25) inset;
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+.SignUpFormLink h3 {
+  text-align: center;
+  color: #9a9a9a;
+  font-size: 15px;
+  margin-top: 25px;
+  font-family: "AvenirLTStd-Book";
+}
+.SignUpFormLink span a {
+  color: #b9e04c;
+}
